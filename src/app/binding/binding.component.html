@@ -1,0 +1,11 @@
+<div [style.backgroundColor]="color" [hidden]="show">
+  Bonjour
+</div>
+<button (click)="this.show = !this.show">
+khabi
+</button>
+<input type="color" #inputColor (change)="changeColor(inputColor, 'secondValue')">
+
+<input type="text" [(ngModel)]="content">
+
+{{content}}
