@@ -12,6 +12,11 @@ import { ItemComponent } from './cv/item/item.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { ListeComponent } from './cv/liste/liste.component';
 import { DetailComponent } from './cv/detail/detail.component';
+import { NgstyleComponent } from './directive/ngstyle/ngstyle.component';
+import { WordComponent } from './directive/word/word.component';
+import { NgclassComponent } from './directive/ngclass/ngclass.component';
+import { HighlightDirective } from './directive/highlight.directive';
+import { DefaultImagePipe } from './default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { DetailComponent } from './cv/detail/detail.component';
     ItemComponent,
     CvComponent,
     ListeComponent,
-    DetailComponent
+    DetailComponent,
+    NgstyleComponent,
+    WordComponent,
+    NgclassComponent,
+    HighlightDirective,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

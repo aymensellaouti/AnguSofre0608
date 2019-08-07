@@ -1,5 +1,8 @@
 <ul class="list-group">
-  <app-item (selectPersonne)="sendSelectedPersonne($event)" [personne]="personnes[0]"></app-item>
-  <app-item (selectPersonne)="sendSelectedPersonne($event)" [personne]="personnes[1]"></app-item>
+  <app-item
+    *ngFor="let personne of personnes"
+    (selectPersonne)="sendSelectedPersonne($event)"
+    [personne]="personne"
+  ></app-item>
 
 </ul>

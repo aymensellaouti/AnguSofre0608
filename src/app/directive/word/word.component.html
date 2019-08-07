@@ -1,0 +1,12 @@
+<p [ngStyle]="{'color': color, 'font-size': taille, 'font-family': police}">
+  word works!
+</p>
+
+
+Color : <input type="text" class="form-control" [(ngModel)]="color">
+Size : <input type="number" class="form-control" #tailleInput (change)="modifierSize(tailleInput.value)">
+Police : <select name="" id="" class="form-control" [(ngModel)]="police">
+  <option value="garamond">Garamond</option>
+  <option value="arial">Arial</option>
+  <option value="Times new roman">Times</option>
+</select>

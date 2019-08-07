@@ -16,6 +16,7 @@ export class ListeComponent implements OnInit {
     this.personnes = [
       new Personne(1, 'sellaouti', 'aymen', 'Teacher', 'as.jpg', 37, 7075595 ),
       new Personne(2, 'personne 2', 'aymen', 'Teacher', '404.png', 37, 7075595 ),
+      new Personne(2, 'personne 2', 'aymen', 'Teacher', '        ', 37, 7075595 )
     ];
   }
 

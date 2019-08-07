@@ -1,0 +1,11 @@
+<p [ngClass]="{'est': est, 'milan': milan, 'barca': barca}">
+  ngclass works!
+</p>
+
+<select (change)="changeClass(team.value)" #team>
+  <option value="est">Esperence</option>
+  <option value="milan">Milan</option>
+  <option value="barca">Barca</option>
+</select>
+
+<p appHighlight>Custom directive</p>
