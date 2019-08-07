@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoServiceService} from '../../Todo/todo-service.service';
 
 @Component({
   selector: 'app-ngclass',
@@ -11,11 +12,12 @@ export class NgclassComponent implements OnInit {
   est = true;
   milan = false;
   barca = false;
-  constructor() { }
+  constructor(private todoService: TodoServiceService) { }
 
   ngOnInit() {
   }
   changeClass(team) {
+    this.todoService.logTodos();
     if (team === 'est') {
       this.est = true;
       this.milan = false;

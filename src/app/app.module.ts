@@ -17,6 +17,8 @@ import { WordComponent } from './directive/word/word.component';
 import { NgclassComponent } from './directive/ngclass/ngclass.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { DefaultImagePipe } from './default-image.pipe';
+import { ListeTodoComponent } from './Todo/liste-todo/liste-todo.component';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DefaultImagePipe } from './default-image.pipe';
     WordComponent,
     NgclassComponent,
     HighlightDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    ListeTodoComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,
