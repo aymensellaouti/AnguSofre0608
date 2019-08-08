@@ -19,6 +19,7 @@ import { HighlightDirective } from './directive/highlight.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { ListeTodoComponent } from './Todo/liste-todo/liste-todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
     HighlightDirective,
     DefaultImagePipe,
     ListeTodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
