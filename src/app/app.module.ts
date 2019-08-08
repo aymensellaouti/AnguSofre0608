@@ -20,6 +20,7 @@ import { DefaultImagePipe } from './default-image.pipe';
 import { ListeTodoComponent } from './Todo/liste-todo/liste-todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HeaderComponent } from './header/header.component';
     DefaultImagePipe,
     ListeTodoComponent,
     EmbaucheComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,

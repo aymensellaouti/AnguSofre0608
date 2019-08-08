@@ -4,9 +4,12 @@ import {CvComponent} from './cv/cv/cv.component';
 import {AppComponent} from './app.component';
 import {ListeTodoComponent} from './Todo/liste-todo/liste-todo.component';
 import {FirstComponent} from './first/first.component';
+import {DetailCvComponent} from './cv/detail-cv/detail-cv.component';
 
 const routes: Routes = [
   {path: 'cv', children: [
+      {path: '', component: CvComponent},
+      {path: 'detail/:id', component: DetailCvComponent}
     ]},
   {path: '', component: CvComponent},
   {path: 'todo', component: ListeTodoComponent},
