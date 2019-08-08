@@ -1,0 +1,17 @@
+<form #formumaire="ngForm">
+  <label for="name">Name</label>
+  <input type="text" class="form-control" ngModel name="name" id="name">
+  <label for="firstname">Firstname</label>
+  <input type="text" class="form-control" ngModel name="firstname" id="firstname">
+  <label for="age">Age</label>
+  <input type="number" ngModel name="age" pattern="\d{1,2}" class="form-control" id="age">
+  <label for="job">Job</label>
+  <input type="text" ngModel name="job" id="job" class="form-control">
+  <label for="path">Path</label>
+  <input type="text" ngModel name="path" class="form-control" id="path">
+  <label for="cin">Cin</label>
+  <input type="text" ngModel name="cin" id="cin" class="form-control">
+  <button class="btn btn-danger" (click)="addPersonne(formumaire)">
+    Add Personne
+  </button>
+</form>

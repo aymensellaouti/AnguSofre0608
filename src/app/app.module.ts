@@ -21,6 +21,9 @@ import { ListeTodoComponent } from './Todo/liste-todo/liste-todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { LoginComponent } from './login/login.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
     ListeTodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    AddPersonneComponent,
+    LoginComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
