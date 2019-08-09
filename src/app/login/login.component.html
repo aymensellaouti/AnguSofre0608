@@ -1,3 +1,6 @@
+<div class="alert alert-danger" *ngIf="errorCredentials">
+  Veuillez vérifier vos credentials
+</div>
 <form #loginForm="ngForm">
   <label for="email">Email</label>
   <input type="text" #email="ngModel" ngModel name="email" required email class="form-control" id="email">
@@ -5,7 +8,7 @@
   <label for="pwd">Password</label>
   <input type="text" #pwd="ngModel" ngModel required minlength="4" name="password" id="pwd" class="form-control">
   <div *ngIf="pwd.invalid && pwd.touched" class="alert alert-danger">Password invalide, vous devez avoir au moin 4 caractères</div>
-  <button [disabled]="loginForm.invalid" class="btn btn-danger" (click)="login()">
+  <button [disabled]="loginForm.invalid" class="btn btn-danger" (click)="login(loginForm.value)">
     login
   </button>
 </form>

@@ -7,12 +7,13 @@ import {FirstComponent} from './first/first.component';
 import {DetailCvComponent} from './cv/detail-cv/detail-cv.component';
 import {AddPersonneComponent} from './cv/add-personne/add-personne.component';
 import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   {path: 'cv', children: [
       {path: '', component: CvComponent},
       {path: 'detail/:id', component: DetailCvComponent},
-      {path: 'add', component: AddPersonneComponent}
+      {path: 'add', component: AddPersonneComponent, canActivate: [AuthGuard]}
     ]},
   {path: '', component: CvComponent},
   {path: 'todo', component: ListeTodoComponent},

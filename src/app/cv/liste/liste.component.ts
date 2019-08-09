@@ -14,7 +14,16 @@ export class ListeComponent implements OnInit {
   constructor(private cvService: CvService) { }
 
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      },
+      (error) => {
+        this.personnes = this.cvService.getFakePersonnes();
+        console.error(error);
+        alert('Problem with database Fake data are shown');
+      }
+    );
   }
 
   sendSelectedPersonne(personne: Personne) {

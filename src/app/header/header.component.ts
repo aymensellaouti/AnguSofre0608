@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   show = false;
+
+  constructor(
+    public authService: AuthService
+  ) { }
   showNavbar() {
     this.show = !this.show;
   }
-  constructor() { }
-
   ngOnInit() {
+  }
+  logout() {
+    this.authService.logout();
   }
 
 }

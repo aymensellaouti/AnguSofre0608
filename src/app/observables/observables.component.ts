@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
+import {filter, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-observables',
@@ -13,7 +14,7 @@ export class ObservablesComponent implements OnInit {
   }
 
   ngOnInit() {
-    const observable = new Observable(
+    const observable = new Observable <Number>(
       (observer) => {
         let i = 5;
         setInterval(() => {

@@ -20,18 +20,30 @@ export class DetailCvComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       (params) => {
         const id = params['id'];
-        this.personne = this.cvService.findPersonneById(id);
+        this.cvService.findPersonneById(id).subscribe(
+          (personne) => {
+            this.personne = personne;
+          },
+          (error) => {
+            console.log(error);
+            // const link = [''];
+            // this.router.navigate(link);
+          }
+        );
       }
     );
   }
   deletePersonne() {
-    const result = this.cvService.deletePersonne(this.personne);
-    if (result) {
-      const link = ['cv'];
-      this.router.navigate(link);
-    } else {
-      alert('Personne innexistante');
-    }
+    const result = this.cvService.deletePersonne(this.personne.id).subscribe(
+      (response) => {
+        const link = ['cv'];
+        this.router.navigate(link);
+      },
+      (error) => {
+        console.log(error);
+        alert('Problème de connexion');
+      }
+    );
   }
 
 }
